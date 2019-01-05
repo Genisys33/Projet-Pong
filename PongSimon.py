@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+
 from tkinter import *
-from tkinter.messagebox import askyesno
 from random import randrange
 
 def jouer():
@@ -8,7 +9,6 @@ def jouer():
 	def deplacement_balle():
 	
 		global dx, dy
-	#if ball <= 0
 		canevas.move(balle, dx, dy)
 		Fenetre.after(30, deplacement_balle)
 		x0_balle,y0_balle,x1_balle,y1_balle = canevas.coords(balle)
