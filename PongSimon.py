@@ -7,7 +7,7 @@ from random import randrange
 def jouer():
 
 	def deplacement_balle():
-	
+
 		global dx, dy
 		canevas.move(balle, dx, dy)
 		Fenetre.after(30, deplacement_balle)
@@ -87,10 +87,10 @@ def menu():
 
 	#Initialisation du menu et des boutons
 	Fenetre.title('Menu')
-	Debut = Button(Fenetre, text='Debut', command=lambda:[Debut.grid_forget(),Quitter.grid_forget(),jouer()])
-	Debut.grid(row=0, column=1)
+	Debut = Button(Fenetre, text='Débuter', command=lambda:[Debut.grid_forget(),Quitter.grid_forget(),jouer()])
+	Debut.grid(row=1, column=1)
 	Quitter = Button(Fenetre, text='Quitter', command=Fenetre.destroy)
-	Quitter.grid(row=0, column=2)
+	Quitter.grid(row=1, column=2)
 
 	Fenetre.mainloop()
 	Fenetre.destroy()
