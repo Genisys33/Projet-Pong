@@ -87,7 +87,10 @@ def menu():
 
 	#Initialisation du menu et des boutons
 	Fenetre.title('Menu')
-	Debut = Button(Fenetre, text='Débuter', command=lambda:[Debut.grid_forget(),Quitter.grid_forget(),jouer()])
+	Textmenu = 'Voulez-vous faire une partie de Pong ?'
+	etiquette = Label(Fenetre, text=Textmenu, fg='black')
+	etiquette.grid(row=0, column=1, columnspan=2, ipady=10, ipadx=10)
+	Debut = Button(Fenetre, text='Débuter', command=lambda:[Debut.grid_forget(),Quitter.grid_forget(),etiquette.grid_forget(),jouer()])
 	Debut.grid(row=1, column=1)
 	Quitter = Button(Fenetre, text='Quitter', command=Fenetre.destroy)
 	Quitter.grid(row=1, column=2)
@@ -97,7 +100,7 @@ def menu():
 
 Fenetre = Tk()
 #Direction de la Balle aléatoire
-dx = randrange(-8, 8)
-dy = randrange(-8, 8)
+dx = randrange(-9, 9)
+dy = randrange(-9, 9)
 
 menu()
